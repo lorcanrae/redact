@@ -1,4 +1,5 @@
 import os
+import re
 import click
 
 
@@ -24,6 +25,10 @@ def process_markdown_file(file_path):
     return output_content
 
 
+def normalise_newlines(content):
+    return re.sub(r'\n{3,}', '\n\n', content)
+
+
 @click.command()
 @click.argument(
     "source_dir", type=click.Path(exists=True, file_okay=False, dir_okay=True)
@@ -35,6 +40,7 @@ def solution(source_dir):
             if file == 'SOLUTION.md':
                 source_file_path = os.path.join(root, file)
                 readme_content = process_markdown_file(source_file_path)
+                readme_content = normalise_newlines(readme_content)
                 readme_path = os.path.join(root, "README.md")
 
                 with open(readme_path, "w", encoding="utf-8") as readme_file:
