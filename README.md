@@ -23,7 +23,7 @@ Markdown text that you want to remove from `SOLUTION.md`
 Use the tool with:
 
 ```bash
-redact solution path/to/directory
+redact solution path/to/directory/
 ```
 
 The tool does not accept file paths, only directory paths.
@@ -31,4 +31,4 @@ The tool does not accept file paths, only directory paths.
 
 ## Notes
 
-Unoptimised, rigid, and written in a hurry.
+Unoptimised, inflexible, uncustomisable,  and written in a hurry.
