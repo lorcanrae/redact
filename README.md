@@ -10,12 +10,12 @@ Will look for files named `SOLUTION.md` in a target directory and any of it's su
 
 In the target file, wrap a block of markdown in commented tags:
 
-```markdown
-`<!-- $SOLUTION_START -->`
+```
+<!-- $SOLUTION_START -->
 
 Markdown text that you want to remove from `SOLUTION.md`
 
-`<!-- $SOLUTION_END -->`
+<!-- $SOLUTION_END -->
 ```
 
 ### CLI Usage
