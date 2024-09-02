@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "redact"
-version = "0.1.0"
+version = "0.2.0"
 description = "CLI tool to redact markdown files in a target directory. Not optimized and written in a hurry"
 authors = ["Lorcan Rae <lorcanrae@gmail.com>"]
 readme = "README.md"
