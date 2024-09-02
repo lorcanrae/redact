@@ -35,7 +35,7 @@ def solution(source_dir):
             if file == 'SOLUTION.md':
                 source_file_path = os.path.join(root, file)
                 readme_content = process_markdown_file(source_file_path)
-                readme_path = os.path.join(root, "README-test.md")
+                readme_path = os.path.join(root, "README.md")
 
                 with open(readme_path, "w", encoding="utf-8") as readme_file:
                     readme_file.write(readme_content)
