@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "redact"
+version = "0.1.0"
+description = "CLI tool to redact markdown files in a target directory. Not optimized and written in a hurry"
+authors = ["Lorcan Rae <lorcanrae@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+click = "^8.1.7"
+
+[tool.poetry.scripts]
+redact = "redact.main:cli"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
