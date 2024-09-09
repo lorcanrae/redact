@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "redact"
-version = "0.3.0"
+version = "0.4.0"
 description = "CLI tool to redact markdown files in a target directory. Not optimized and written in a hurry"
 authors = ["Lorcan Rae <lorcanrae@gmail.com>"]
 readme = "README.md"
@@ -11,6 +11,9 @@ click = "^8.1.7"
 
 [tool.poetry.scripts]
 redact = "redact.main:cli"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.2"
 
 [build-system]
 requires = ["poetry-core"]
