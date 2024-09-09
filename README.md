@@ -11,11 +11,13 @@ Will look for files named `SOLUTION.md` in a target directory and any of it's su
 In the target file, wrap a block of markdown in commented tags:
 
 ```
+Some text
+
 <!-- $SOLUTION_START -->
-
 Markdown text that you want to remove from `SOLUTION.md`
-
 <!-- $SOLUTION_END -->
+
+Some more text
 ```
 
 ### CLI Usage
@@ -35,10 +37,9 @@ redact solution path/to/SOLUTION.md
 
 Enforces some quality checks. Will throw an error if a check fails:
 - Tags must alternate: start, end, start, end, etc...
-- An `end` tag must have the same indentation as a `start` tag
-- The line immediately after a `start` tag must have the same indentation. TODO: this should be the next line with text on it.
+- The line immediately after a `start` tag must have the same indentation as the `start` tag. TODO: this should be the next line with text on it.
 - An `end` tag must have the same identation level as it's preceding `start` tag.
-- There can be no orphan tags: for ever `start` tag, there must be an `end` tag.
+- There can be no orphan tags: for every `start` tag, there must be an `end` tag.
 
 ## Notes
 
