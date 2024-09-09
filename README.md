@@ -26,9 +26,20 @@ Use the tool with:
 redact solution path/to/directory/
 ```
 
-The tool does not accept file paths, only directory paths.
+or
+```bash
+redact solution path/to/SOLUTION.md
+```
 
+### Quality checks
+
+Enforces some quality checks. Will throw an error if a check fails:
+- Tags must alternate: start, end, start, end, etc...
+- An `end` tag must have the same indentation as a `start` tag
+- The line immediately after a `start` tag must have the same indentation. TODO: this should be the next line with text on it.
+- An `end` tag must have the same identation level as it's preceding `start` tag.
+- There can be no orphan tags: for ever `start` tag, there must be an `end` tag.
 
 ## Notes
 
-Unoptimised, inflexible, uncustomisable,  and written in a hurry.
+Unoptimised, inflexible, uncustomisable, and written in a hurry.
